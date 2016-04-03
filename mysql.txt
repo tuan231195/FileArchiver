@@ -1,0 +1,21 @@
+ CREATE TABLE blobtable ( tempname varchar(45) NOT NULL, filedata mediumblob NOT NULL, PRIMARY KEY (tempname) );
+
+CREATE TABLE filerec ( filename VARCHAR(255) NOT NULL , curhash INT(11) NOT NULL , ovhash INT(11) NOT NULL , currentversion INT(11) NOT NULL , nversions INT(11) NOT NULL , length INT(11) NOT NULL , mtnsec INT(11) NOT NULL , mtsec INT(11) NOT NULL , tempname VARCHAR(45) NOT NULL , PRIMARY KEY (filename) );
+
+ALTER TABLE filerec ADD FOREIGN KEY (tempname) REFERENCES blobtable (tempname);
+
+CREATE TABLE  commentstable  (  idcommentstable  int(11) NOT NULL AUTO_INCREMENT,  fileref  varchar(255) NOT NULL,  commentnum  int(11) NOT NULL,  commenttxt  mediumtext NOT NULL, PRIMARY KEY ( idcommentstable ), KEY  fileref  ( fileref ) );
+
+ALTER TABLE commentstable ADD FOREIGN KEY (fileref) REFERENCES filerec (filename);
+
+CREATE TABLE  fileblkhashes  (  idfileblkhashes  int(11) NOT NULL AUTO_INCREMENT,  fileref  varchar(255) NOT NULL,  blknum  int(11) NOT NULL,  hashval  int(11) NOT NULL, PRIMARY KEY ( idfileblkhashes ), KEY  fileref  ( fileref ) );
+
+ALTER TABLE fileblkhashes ADD FOREIGN KEY (fileref) REFERENCES filerec (filename);
+
+CREATE TABLE  versionrec  (  idversionrec  int(11) NOT NULL AUTO_INCREMENT,  fileref  varchar(255) NOT NULL,  versionnum  int(11) NOT NULL,  length  int(11) NOT NULL,  mtsec  int(11) NOT NULL,  mtnsec  int(11) NOT NULL,  ovhash  int(11) NOT NULL, PRIMARY KEY ( idversionrec ) );
+
+ALTER TABLE versionrec ADD FOREIGN KEY (fileref) REFERENCES filerec (filename);
+
+CREATE TABLE  blktable  (  idblktable  int(11) NOT NULL AUTO_INCREMENT,  version  int(11) NOT NULL,  length  int(11) NOT NULL,  blknum  int(11) NOT NULL,  hash  int(11) NOT NULL,  data  mediumblob NOT NULL, PRIMARY KEY ( idblktable ) );
+
+ALTER TABLE blktable ADD FOREIGN KEY (version) REFERENCES versionrec (idversionrec);

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>Database.h</itemPath>
+      <itemPath>FileArchiver.h</itemPath>
+      <itemPath>FileRecord.h</itemPath>
+      <itemPath>MyTableModel.h</itemPath>
+      <itemPath>MyWindow.h</itemPath>
+      <itemPath>RetrieveForm.h</itemPath>
+      <itemPath>Utils.h</itemPath>
+      <itemPath>VersionInfo.h</itemPath>
+      <itemPath>VersionRec.h</itemPath>
+      <itemPath>getCommentForm.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+      <itemPath>MyWindow.ui</itemPath>
+      <itemPath>RetrieveForm.ui</itemPath>
+      <itemPath>getCommentForm.ui</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>Database.cpp</itemPath>
+      <itemPath>FileArchiver.cpp</itemPath>
+      <itemPath>FileRecord.cpp</itemPath>
+      <itemPath>MyTableModel.cpp</itemPath>
+      <itemPath>MyWindow.cpp</itemPath>
+      <itemPath>RetrieveForm.cpp</itemPath>
+      <itemPath>VersionRec.cpp</itemPath>
+      <itemPath>getCommentForm.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="4">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <qt>
+        <modules>core gui widgets</modules>
+      </qt>
+      <compileType>
+        <ccTool>
+          <standard>8</standard>
+          <incDir>
+            <pElem>/usr/include</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibLibItem>mysqlcppconn</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="Database.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Database.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FileArchiver.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FileArchiver.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FileRecord.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FileRecord.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MyTableModel.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MyTableModel.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MyWindow.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MyWindow.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MyWindow.ui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RetrieveForm.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RetrieveForm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RetrieveForm.ui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Utils.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="VersionInfo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="VersionRec.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="VersionRec.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="getCommentForm.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="getCommentForm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="getCommentForm.ui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="4">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <qt>
+        <buildMode>1</buildMode>
+        <modules>core gui widgets</modules>
+      </qt>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="Database.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Database.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FileArchiver.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FileArchiver.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FileRecord.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FileRecord.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MyTableModel.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MyTableModel.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MyWindow.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MyWindow.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MyWindow.ui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RetrieveForm.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="RetrieveForm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RetrieveForm.ui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Utils.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="VersionInfo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="VersionRec.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="VersionRec.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="getCommentForm.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="getCommentForm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="getCommentForm.ui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
